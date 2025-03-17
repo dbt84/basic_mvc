@@ -8,6 +8,15 @@ class UserController {
         require 'views/users/allusers.php';
     }
     public function add() {
+        $melding = "";
+        if($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $userModel = new User();
+            $melding = "Gebruiker is toegevoegd!";
+            $_POST = NULL;
+        }
+        require "views/users/adduser.php";
+    }
+    public function blabla() {
         if($_SERVER['REQUEST_METHOD'] == 'POST') {
             $userModel = new User();
             $userModel->addUser($_POST);

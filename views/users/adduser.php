@@ -1,10 +1,3 @@
-<?php
-$melding = "";
-if(isset($_POST['name'])) {
-    $userModel = new User();
-    $userModel->addUser($_POST);
-}
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +5,7 @@ if(isset($_POST['name'])) {
     <title>Home</title>
 </head>
 <body>
+    <p><?php echo $melding ?></p>
     <h1>Gebruikerslijst</h1>
     <form action="" method="POST">
         <label for="name">Naam:</label>
